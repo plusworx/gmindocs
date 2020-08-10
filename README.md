@@ -1,0 +1,2 @@
+# gmindocs
+Documentation for gmin
