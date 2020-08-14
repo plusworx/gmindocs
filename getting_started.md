@@ -60,14 +60,7 @@ If you want to see what your configuration looks like run the command `gmin show
 
 If you already use [GAM](https://github.com/jay0lee/GAM) then you will already have a service account and JSON credentials file. In this case you could use the same service account by copying the GAM credentials.json, rename the copy to gmin_credentials and place it in the folder/directory that you set for the credentials path when running `gmin init`.
 
-# Usage
-Commands usually take the form of `gmin <verb> <object> <flags>`. Although there may be the odd exception like `gmin whoami`.
-
-Command flags look like -x or --longnameforx. Flags that relate to boolean values (true/false) just need the flag to be provided and no value. For example, the `-c or --changepassword` flag when creating a user.
-
-Type `gmin <command> -h or --help` to get help about a particular command. For example, to get help about creating a new user you could enter `gmin create user -h`. Help text will be improved over time.
-
-## Some usage examples
+## Usage examples
 
 **Create a new user**
 
