@@ -2,13 +2,13 @@
 
 This section contains information about the commands that you can use to manage G Suite users.
 
-## batch-create user
+## batch-create users
 
-## batch-delete user
+## batch-delete users
 
-## batch-undelete user
+## batch-undelete users
 
-## batch-update user
+## batch-update users
 
 ## create user
 
@@ -16,7 +16,7 @@ This section contains information about the commands that you can use to manage 
 
 ## get user
 
-## list user
+## list users
 
 ## undelete user
 

@@ -10,3 +10,4 @@
 * [Managing Orgunits](managing_orgunits.md)
 * [Managing Users](managing_users.md)
 * [Development Roadmap](dev_roadmap.md)
+* [Getting Help](getting_help.md)
