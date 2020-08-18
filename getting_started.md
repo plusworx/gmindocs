@@ -1,9 +1,9 @@
 # Getting Started
 
 ## Installing gmin
-gmin is intended to be used by G Suite admins who are authorised to perform administration tasks. The gmin code lives on [GitHub](https://github.com/plusworx/gmin) and prebuilt executable files are available for Linux, Mac and Windows. Download the executable suitable for your operating system from the releases page.
+gmin is intended to be used by G Suite admins who are authorised to perform administration tasks. The gmin code lives on [GitHub](https://github.com/plusworx/gmin) and prebuilt executable files are available for Linux, Mac and Windows. Download the executable suitable for your operating system from the [releases page](https://github.com/plusworx/gmin/releases).
 
-In order to use gmin, a bit of set up before it can be put to work:
+In order to use gmin, a bit of set up is required before it can be put to work:
 
 Steps 1 and 2 are completed in the [Google Developer Console](https://console.developers.google.com/).
 
