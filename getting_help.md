@@ -18,6 +18,16 @@ attrs
 --filter (-f) Show fields whose names contain the filter string<br />
 --queryable (-q) Show fields that can be used with the query flag<br />
 
+**Valid objects**:<br />
+chromeosdevice, crosdevice, cdev<br />
+group, grp<br />
+group-alias, grp-alias, galias, ga<br />
+group-member, grp-member, grp-mem, gmember, gmem<br />
+orgunit, ou<br />
+schema, sc<br />
+user<br />
+user-alias, ualias, ua<br />
+
 The `gmin show attributes` command allows you to display field names (attributes) of G Suite objects.
 
 **Examples**:
@@ -42,6 +52,11 @@ This command displays all of the user fields that contain the string 'ssh' in th
 **Command aliases**:<br />
 attr-vals, avals
 
+**Valid objects**:<br />
+chromeosdevice, crosdevice, cdev<br />
+group-member, grp-member, grp-mem, gmember, gmem<br />
+user<br />
+
 The `gmin show attribute-values` command allows you to discover predefined values for object fields (attributes).
 
 **Examples**:
@@ -56,6 +71,13 @@ This command displays the predefined values for the type field in the user email
 
 **Command aliases**:<br />
 flag-vals, fvals
+
+**Valid objects**:<br />
+chromeosdevice, crosdevice, cdev<br />
+group, grp<br />
+group-member, grp-member, grp-mem, gmember, gmem<br />
+orgunit, ou<br />
+user<br />
 
 The `gmin show flag-values` command allows you to discover predefined values for command flags.
 
