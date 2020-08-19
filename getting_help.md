@@ -23,25 +23,49 @@ The `gmin show attributes` command allows you to display field names (attributes
 **Examples**:
 
 `gmin show attrs user`<br />
-This would show you all of the field names for the user object. You will notice that some fields have an asterisk (*) next to them. This denotes fields that are composite fields, meaning that they are arrays or fields that are made up of other fields.
+This command shows you all of the field names for the user object. You will notice that some fields have an asterisk (*) next to them. This denotes fields that are composite fields, meaning that they are arrays or fields that are made up of other fields.
 
 `gmin show attrs user -c`<br />
-This would get a list of all of the composite fields within the user object.
+This command gets a list of all of the composite fields within the user object.
 
 `gmin show attrs user address`<br />
- This would display the fields within an address.
+ This command displays the fields within an address.
 
 `gmin show attrs user -q`<br />
-This would display a list of user fields can be used with the list command query flag. **Please note**: you cannot use the --queryable and --composite flags in the same command.
+This command displays a list of user fields that can be used with the list command query flag. **Please note**: you cannot use the --queryable and --composite flags in the same command.
 
 `gmin show attrs user -f ssh`<br />
-This would display all of the user fields that contain the string 'ssh' in their names.
+This command displays all of the user fields that contain the string 'ssh' in their names.
 
 ### show attribute-values
-`gmin show attribute-values`
+
+**Command aliases**:<br />
+attr-vals, avals
+
+The `gmin show attribute-values` command allows you to discover predefined values for object fields (attributes).
+
+**Examples**:
+
+`gmin show avals user`
+This command displays all of the user fields that have predefined values.
+
+`gmin show attribute-values user email type`
+This command displays the predefined values for the type field in the user email attribute.
 
 ### show flag-values
-`gmin show flag-values`
+
+**Command aliases**:<br />
+flag-vals, fvals
+
+The `gmin show flag-values` command allows you to discover predefined values for command flags.
+
+**Examples**:
+
+`gmin show fvals user`
+This command displays the names of the flags that have predefined values that can be used with user object commands.
+
+`gmin show fvals user orderby`
+This command displays the predefined values for the orderby flag when used with user object commands.
 
 ## whoami command
 
