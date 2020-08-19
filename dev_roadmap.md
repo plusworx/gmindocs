@@ -20,7 +20,6 @@
 * Domain Aliases
 * Domains
 * ~~Group Aliases~~ - implemented in v0.4.0
-* HasMember functionality
 * Mobile Devices
 * Notifications
 * Privileges
