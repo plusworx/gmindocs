@@ -1,6 +1,7 @@
 <!-- docs/_sidebar.md -->
 
 * [Home](/)
+* [What can you do with gmin?](what_does_gmin_do.md)
 * [Getting Started](getting_started.md)
 * [Configuration](configuration.md)
 * [Batch Commands](batch_commands.md)

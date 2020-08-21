@@ -55,6 +55,7 @@ attr-vals, avals
 **Valid objects**:<br />
 chromeosdevice, crosdevice, cdev<br />
 group-member, grp-member, grp-mem, gmember, gmem<br />
+mobiledevice, mobdevice, mdev<br />
 user<br />
 
 The `gmin show attribute-values` command allows you to discover predefined values for object fields (attributes).
