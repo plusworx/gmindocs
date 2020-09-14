@@ -56,6 +56,16 @@ See [Managing Group Aliases](managing_group_aliases.md) for more information.
 
 See [Managing Group Members](managing_gmems.md) for more information.
 
+## Mobile Devices
+
+| Action | Description |
+|--------|-------------|
+| Delete | Single device and batch deletion |
+| Get Information | Get and list devices |
+| Manage | Single device and batch manage |
+
+See [Managing Mobile Devices](managing_mobile_devices.md) for more information.
+
 ## Orgunits
 
 | Action | Description |
