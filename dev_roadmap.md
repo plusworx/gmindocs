@@ -49,4 +49,7 @@
 * ~~Show object attributes, enumerated object attribute values and enumerated command flag values~~ implemented in v0.7.0
 * Enable command dry run
 * Deletion confirmation
-* Always on logging
+* Always on logging with --log-level flag
+* Suppress output with --silent flag
+* Shell completion
+* Scopes command to construct string for admin console
