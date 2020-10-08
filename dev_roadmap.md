@@ -20,7 +20,7 @@
 * Domain Aliases
 * Domains
 * ~~Group Aliases~~ - implemented in v0.4.0
-* Mobile Devices
+* ~~Mobile Devices~~ - implemented in v0.7.0
 * Notifications
 * Privileges
 * Resources
@@ -34,9 +34,19 @@
 
 **Reports API**
 
+### Group Settings API ###
+* Allow management of group settings
+
+### Google Sheets API ###
+* Allow reading of Google Sheets for batch command input
+
 ## General Functionality
 * ~~Enable pipe input to batch commands~~ - implemented in v0.6.0
-* Enable .csv file input to batch commands
-* Enable Google Sheet input to batch commands
+* ~~Enable .csv file input to batch commands~~ - implemented in 0.7.0
+* ~~Enable Google Sheet input to batch commands~~ - implemented in 0.7.0
 * ~~List pagination~~ - implemented in v0.5.0
 * ~~Additional help with show function for valid attributes and types~~ implemented in v0.6.0
+* ~~Show object attributes, enumerated object attribute values and enumerated command flag values~~ implemented in v0.7.0
+* Enable command dry run
+* Deletion confirmation
+* Always on logging
