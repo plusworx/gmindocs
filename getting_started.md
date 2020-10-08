@@ -1,16 +1,16 @@
 # Getting Started
 
 ## Installing gmin
-gmin is intended to be used by G Suite admins who are authorised to perform administration tasks. The gmin code lives on [GitHub](https://github.com/plusworx/gmin) and prebuilt executable files are available for Linux, Mac and Windows. Download the executable suitable for your operating system from the [releases page](https://github.com/plusworx/gmin/releases).
+gmin is intended to be used by Google Workspace admins who are authorised to perform administration tasks. The gmin code lives on [GitHub](https://github.com/plusworx/gmin) and prebuilt executable files are available for Linux, Mac and Windows. Download the executable suitable for your operating system from the [releases page](https://github.com/plusworx/gmin/releases).
 
 In order to use gmin, a bit of set up is required before it can be put to work:
 
 Steps 1 and 2 are completed in the [Google Developer Console](https://console.developers.google.com/).
 
 1. gmin needs a Google Cloud Platform (GCP) Project with the required API(s) enabled. At present gmin only uses the Admin SDK APIs.
-2. A service account has to be created in the project, that has a JSON key credential file generated for it and has G Suite domain-wide delegation enabled.
-3. The service account needs to be added to the list of API clients authorised for domain-wide delegation in G Suite, along with the required scopes to perform the requested actions. Set up is as follows:
-* Go to your G Suite admin console
+2. A service account has to be created in the project, that has a JSON key credential file generated for it and has Google Workspace domain-wide delegation enabled.
+3. The service account needs to be added to the list of API clients authorised for domain-wide delegation in Google Workspace, along with the required scopes to perform the requested actions. Set up is as follows:
+* Go to your Google Workspace admin console
 * Click the "Security" icon (or use the search bar)
 * Click "App access control"
 * Click "MANAGE DOMAIN-WIDE DELEGATION"

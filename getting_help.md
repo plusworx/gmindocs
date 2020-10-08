@@ -28,7 +28,7 @@ schema, sc<br />
 user<br />
 user-alias, ualias, ua<br />
 
-The `gmin show attributes` command allows you to display field names (attributes) of G Suite objects.
+The `gmin show attributes` command allows you to display field names (attributes) of Google Workspace objects.
 
 **Examples**:
 

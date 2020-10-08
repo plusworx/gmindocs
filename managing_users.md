@@ -1,6 +1,6 @@
 # Managing Users
 
-This section contains information about the commands that you can use to manage G Suite users.
+This section contains information about the commands that you can use to manage Google Workspace users.
 
 ## batch-create users
 
@@ -15,7 +15,7 @@ user
 
 **Required Scope**: https://www.googleapis.com/auth/admin.directory.user
 
-The batch-create users command allows you to create multiple G Suite users with one command. It takes an input file in JSON format and outputs a message for each user that it creates. If an error is encountered, processing stops and an error message is displayed.
+The batch-create users command allows you to create multiple Google Workspace users with one command. It takes an input file in JSON format and outputs a message for each user that it creates. If an error is encountered, processing stops and an error message is displayed.
 
 The input file must contain valid JSON. Details for each user are expected on separate lines like this:
 
@@ -41,7 +41,7 @@ user
 
 **Required Scope**: https://www.googleapis.com/auth/admin.directory.user
 
-The batch-delete users command allows you to delete multiple G Suite users with one command. It can take an input file in plain text format or input from a command line pipe. A message is displayed for each user that is deleted. If an error is encountered, processing stops and the error message is displayed.
+The batch-delete users command allows you to delete multiple Google Workspace users with one command. It can take an input file in plain text format or input from a command line pipe. A message is displayed for each user that is deleted. If an error is encountered, processing stops and the error message is displayed.
 
 The input file or piped input must provide the email address or id of each user on a separate line like this:
 
@@ -66,7 +66,7 @@ user
 
 **Required Scope**: https://www.googleapis.com/auth/admin.directory.user
 
-The batch-undelete users command allows you to undelete (restore) multiple G Suite users with one command. It can take an input file in plain text format or input from a command line pipe. A message is displayed for each user that is undeleted. If an error is encountered, processing stops and the error message is displayed.
+The batch-undelete users command allows you to undelete (restore) multiple Google Workspace users with one command. It can take an input file in plain text format or input from a command line pipe. A message is displayed for each user that is undeleted. If an error is encountered, processing stops and the error message is displayed.
 
 The input file or piped input must provide the unique id of each user on a separate line like this:
 
@@ -89,7 +89,7 @@ user
 
 **Required Scope**: https://www.googleapis.com/auth/admin.directory.user
 
-The batch-update users command allows you to update multiple G Suite users with one command. It takes an input file in JSON format. A message is displayed for each user that is updated. If an error is encountered, processing stops and the error message is displayed.
+The batch-update users command allows you to update multiple Google Workspace users with one command. It takes an input file in JSON format. A message is displayed for each user that is updated. If an error is encountered, processing stops and the error message is displayed.
 
 The input file must contain valid JSON. Details for each user are expected on separate lines like this:
 
@@ -100,7 +100,7 @@ crt
 
 **Required Scope**: https://www.googleapis.com/auth/admin.directory.user
 
-The create user command allows you to create a G Suite user.
+The create user command allows you to create a Google Workspace user.
 
 ## delete user
 
@@ -109,7 +109,7 @@ del
 
 **Required Scope**: https://www.googleapis.com/auth/admin.directory.user
 
-The delete user command allows you to delete a G Suite user.
+The delete user command allows you to delete a Google Workspace user.
 
 ## get user
 
@@ -126,7 +126,7 @@ und
 
 **Required Scope**: https://www.googleapis.com/auth/admin.directory.user
 
-The undelete user command allows you to undelete a G Suite user.
+The undelete user command allows you to undelete a Google Workspace user.
 
 ## update user
 
@@ -135,4 +135,4 @@ upd
 
 **Required Scope**: https://www.googleapis.com/auth/admin.directory.user
 
-The update user command allows you to update a G Suite user.
+The update user command allows you to update a Google Workspace user.

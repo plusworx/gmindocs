@@ -11,7 +11,7 @@ In order to create a gmin configuration file, the `gmin init` command is provide
 
 1. Please enter an administrator email address:
 
-This is the email address of the admin user that gmin will impersonate to perform tasks. Therefore, you should enter the email address of an administrator for your G Suite domain who has sufficient rights to perform the tasks that you will be requesting via gmin. The address of a super admin is a good choice because they are allowed to perform all admin tasks for a domain.
+This is the email address of the admin user that gmin will impersonate to perform tasks. Therefore, you should enter the email address of an administrator for your Google Workspace domain who has sufficient rights to perform the tasks that you will be requesting via gmin. The address of a super admin is a good choice because they are allowed to perform all admin tasks for a domain.
 
 2. Please enter a full config file path (Press 'Enter' for default value):
 
@@ -25,7 +25,7 @@ This is the full path to the directory/folder where the gmin_credentials JSON fi
 
 4. Please enter customer ID (Press 'Enter' for default value):
 
-This is your G Suite customer ID. If you don't know what it is, then you can just press 'Enter' and the default value of 'my_customer' will be used.
+This is your Google Workspace customer ID. If you don't know what it is, then you can just press 'Enter' and the default value of 'my_customer' will be used.
 
 If you see the message - **\*\*\*\* gmin: init completed successfully \*\*\*\*** - then you have completed the configuration file setup.
 

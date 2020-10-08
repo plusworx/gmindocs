@@ -17,4 +17,4 @@ batch-delete, batch-manage, batch-move and batch-undelete can all accept input d
 
 The above gmin list command returns a list of primary email addresses for users who belong to the TestOU orgunit. The result of this query is returned as JSON which is piped into a jq command that is used to get the raw email addresses which in turn, are piped into the gmin batch-delete command which deletes those users.
 
-See the 'Managing ...' sections of the documentation to get information on how these batch commands are applied to G Suite objects.
+See the 'Managing ...' sections of the documentation to get information on how these batch commands are applied to Google Workspace objects.
