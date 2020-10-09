@@ -1,5 +1,5 @@
 # gmin
-A friendly Google Workspace administration CLI (command line interface) written in Go (aka Golang).
+A friendly Google Workspace administration CLI (command line interface) written in Go (aka Golang). **gmin** is free (as in beer) and open source so that other people can help to make it even better.
 
 Latest version: **v0.7.0**
 
