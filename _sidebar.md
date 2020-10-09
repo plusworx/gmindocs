@@ -16,6 +16,7 @@
 * [Managing Orgunits](managing_orgunits.md)
 * [Managing Users](managing_users.md)
 * [Managing User Aliases](managing_user_aliases.md)
+* [Logging](logging.md)
 * [Empty Data Fields](empty_data.md)
 * [Development Roadmap](dev_roadmap.md)
 * [Getting Help](getting_help.md)
