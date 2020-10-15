@@ -17,6 +17,9 @@
 
 **Reports API**
 
+### Drive API
+**Drive ContentRestriction (Locking) API**
+
 ### Cloud Identity
 **Devices API**
 
