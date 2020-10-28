@@ -4,7 +4,7 @@ Once you have a project, service account and gmin_credentials JSON file (see [Ge
 
 gmin gets its configuration information from either a configuration file (.gmin.yaml) or operating system environment variables. If both a configuration file and environment variables exist, the environment variables override the configuration file settings.
 
-The `gmin init` and `gmin set` commands are used to create and update the gmin configuration file.
+The `gmin init` and `gmin set config` commands are used to create and update the gmin configuration file.
 
 ## init command
 In order to create a gmin configuration file, the `gmin init` command is provided. When this command is invoked, you will be prompted to provide configuration information that will be used to create the configuration file. The prompts are as follows:
