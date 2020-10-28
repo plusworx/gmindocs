@@ -7,7 +7,10 @@ In order to use gmin, a bit of set up is required before it can be put to work:
 
 Steps 1 and 2 are completed in the [Google Developer Console](https://console.developers.google.com/).
 
-1. gmin needs a Google Cloud Platform (GCP) Project with the required API(s) enabled. At present gmin only uses the Admin SDK APIs.
+1. gmin needs a Google Cloud Platform (GCP) Project with the required API(s) enabled. The APIs used are:
+* Admin SDK
+* Groups Settings API
+* Google Sheets API
 2. A service account has to be created in the project, that has a JSON key credential file generated for it and has Google Workspace domain-wide delegation enabled.
 3. The service account needs to be added to the list of API clients authorised for domain-wide delegation in Google Workspace, along with the required scopes to perform the requested actions. Set up is as follows:
 * Go to your Google Workspace admin console
@@ -18,11 +21,13 @@ Steps 1 and 2 are completed in the [Google Developer Console](https://console.de
 * In the "Client ID" field enter the service account's "Client ID" - this can be found in the Google Developer Console under "IAM & Admin" -> "Service Accounts", then "View Client ID" for the newly created service account. It is a ~21 character numerical string.
 * In the next field, "OAuth Scopes (comma-delimited)", enter as many of the scopes below as you need and then click "Authorise".
 
-**Please note**: readonly scopes are needed for get and list functions. The other more permissive scopes are needed for
-create, delete, update and undelete functions. Enter all of the scopes if you want full functionality.
+**Please note**: readonly scopes are needed for get,list and batch functions where a Google Sheet is used for data input. The other more permissive scopes are needed for all other functions. Enter all of the scopes if you want full functionality.
 
 <div style="display: inline">https://www.googleapis.com/auth/admin.directory.device.chromeos</div><br />
 <div style="display: inline">https://www.googleapis.com/auth/admin.directory.device.chromeos.readonly</div><br />
+<div style="display: inline">https://www.googleapis.com/auth/admin.directory.device.mobile</div><br />
+<div style="display: inline">https://www.googleapis.com/auth/admin.directory.device.mobile.action</div><br />
+<div style="display: inline">https://www.googleapis.com/auth/admin.directory.device.mobile.readonly</div><br />
 <div style="display: inline">https://www.googleapis.com/auth/admin.directory.group</div><br />
 <div style="display: inline">https://www.googleapis.com/auth/admin.directory.group.member</div><br />
 <div style="display: inline">https://www.googleapis.com/auth/admin.directory.group.member.readonly</div><br />
@@ -35,20 +40,13 @@ create, delete, update and undelete functions. Enter all of the scopes if you wa
 <div style="display: inline">https://www.googleapis.com/auth/admin.directory.user.readonly</div><br />
 <div style="display: inline">https://www.googleapis.com/auth/admin.directory.userschema</div><br />
 <div style="display: inline">https://www.googleapis.com/auth/admin.directory.userschema.readonly</div><br />
+<div style="display: inline">https://www.googleapis.com/auth/apps.groups.settings</div><br />
+<div style="display: inline">https://www.googleapis.com/auth/drive.readonly</div><br />
 
-4. Copy/move the gmin binary to a convenient directory/folder and rename the JSON key file, downloaded earlier, to 'gmin_credentials'. Place in a directory/folder suitable for your environment.
-5. Run the command `gmin init` and enter the required information:
+4. Copy/move the gmin binary to an appropriate directory/folder and rename the JSON key file, downloaded earlier, to 'gmin_credentials'. Place in a directory/folder suitable for your environment.
+5. Run the command `gmin init` and enter the required information to create a gmin configuration file. See the [configuration page](configuration.md) for more details.
 
-* Email address of the admin whose privileges will be used (mandatory).
-* Path where config file, .gmin.yaml, will be written. Default is current user's home directory. If you choose a different installation path to the default for the config file then that path will need to be given with each gmin command by using the --config flag.
-* Path where service account credentials json file is stored. File must be named 'gmin_credentials'. Default is current user's home directory.
-* Customer ID. Default is 'my_customer'.
-
-Alternatively, you can provide the required information with environment variables:
-
-* GMIN_ADMINISTRATOR
-* GMIN_CREDENTIALPATH
-* GMIN_CUSTOMERID
+Alternatively, you can provide the required configuration information with environment variables. See the [configuration page](configuration.md) for details.
 
 **Please note**: If both a config file and environment variables exist then the environment variables take precedence.
 
@@ -66,11 +64,11 @@ If you already use [GAM](https://github.com/jay0lee/GAM) then you will already h
 
 `gmin create user new.user@mydomain.com --firstname New --lastname User --password MyStrongPassword`
 
-with abbreviations the command would look like this -
+with short flag names the above command would look like this -
 
 `gmin crt user new.user@mydomain.com -f New -l User -p MyStrongPassword`
 
-The user object has a lot of attributes and there are only flags for the most commonly-used ones. However, you can set any user attribute via the attributes (-a or --attributes) flag by providing a JSON string.
+You can set any user attribute via the attributes (-a or --attributes) flag by providing a JSON string.
 
 Therefore the user above could be created by using the following command -
 
@@ -128,7 +126,7 @@ https://developers.google.com/admin-sdk/directory/v1/reference is a useful resou
 
 **Create and update commands**
 
-Where an attribute flag (-a or --attributes) is provided for create or update commands, the value can be any valid JSON string that provides attribute values. Please note that if you are providing empty or false values you will need to use the --force flag with the field names separated by '~' otherwise those fields will be ignored.
+Where an attribute flag (-a or --attributes) is provided for create or update commands, the value can be any valid JSON string that provides attribute values. Please note that if you are setting empty or false values you will either need to use the --force flag with the field names separated by '~', or include a 'forceSendFields' element in your JSON string, otherwise those fields will be ignored.
 
 ## Query Flag
 
