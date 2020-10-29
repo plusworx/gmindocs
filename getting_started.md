@@ -62,7 +62,7 @@ If you already use [GAM](https://github.com/jay0lee/GAM) then you will already h
 
 **Create a new user**
 
-`gmin create user new.user@mydomain.com --firstname New --lastname User --password MyStrongPassword`
+`gmin create user new.user@mydomain.com --first-name New --last-name User --password MyStrongPassword`
 
 with short flag names the above command would look like this -
 
