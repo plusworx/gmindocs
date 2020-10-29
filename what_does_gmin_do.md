@@ -56,6 +56,15 @@ See [Managing Group Aliases](managing_group_aliases.md) for more information.
 
 See [Managing Group Members](managing_gmems.md) for more information.
 
+## Group Settings
+
+| Action | Description |
+|--------|-------------|
+| Get Information | Get group settings |
+| Manage | Single group and batch management |
+
+See [Managing Group Settings](managing_group_settings.md) for more information.
+
 ## Mobile Devices
 
 | Action | Description |
