@@ -37,5 +37,5 @@ gmin_log.YYYYmmDD000000 where the time portion of the name is set to zeroes. Thi
 
 Information is written to log files in JSON format. An example entry might look like this:
 
-`{"level":"info","ts":"2020-10-29T13:36:56.419Z","msg":"User Information","gmin admin":"admin@mycompany.com","Username":"auser","Hostname":"cdt450",`
-`"IP Address":"192.168.2.38:58705","command":"list usr "}`
+`{"level":"info","ts":"2020-10-29T13:36:56.419Z","msg":"User Information","gmin admin":"admin@mycompany.com",`
+`"Username":"auser","Hostname":"cdt450", "IP Address":"192.168.2.38:58705","command":"list usr "}`
