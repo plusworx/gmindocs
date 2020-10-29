@@ -122,8 +122,6 @@ This allows you to restore a user that has been deleted.
 
 These commands have an attribute flag (-a or --attributes) where you can specify particular object attributes that you want to see in the results. If the attribute is not present (including false or empty) then it will not be displayed.
 
-https://developers.google.com/admin-sdk/directory/v1/reference is a useful resource for looking up valid attribute names and values.
-
 **Create and update commands**
 
 Where an attribute flag (-a or --attributes) is provided for create or update commands, the value can be any valid JSON string that provides attribute values. Please note that if you are setting empty or false values you will either need to use the --force flag with the field names separated by '~', or include a 'forceSendFields' element in your JSON string, otherwise those fields will be ignored.
@@ -143,5 +141,3 @@ This command will only return the primary email address for each user that satis
 Similarly to the attributes flag above, query clauses are separated by the tilde (~) character and quotation marks may need to be used. This command returns a list of users whose last name is Smith and has an address in London -
 
 `gmin list users -q lastname=Smith~addressLocality=London`
-
-https://developers.google.com/admin-sdk/directory/v1/get-start/getting-started is a useful resource for looking up query parameters. There are 'Search for' links for different objects like Users and Groups.
