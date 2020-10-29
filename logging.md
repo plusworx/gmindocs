@@ -29,11 +29,11 @@ The log rotation time specifies the amount of time (in seconds) that needs to ha
 
 The log files are named according to the following scheme:
 
-gmin_log.YYYYmmDDHHMMSS where YYYY is the current year, mm is the month, DD is the day, HH is the hour (24 hour clock), MM are the minutes and SS are the seconds.
+**gmin_log.YYYYmmDDHHMMSS** where YYYY is the current year, mm is the month, DD is the day, HH is the hour (24 hour clock), MM are the minutes and SS are the seconds.
 
 The actual values in the date/time part of the log file name depend on the value used for log rotation time. For example, if the default log rotation time of 86400 is used then the log file names will look like this:
 
-gmin_log.YYYYmmDD000000 where the time portion of the name is set to zeroes. This is because the log rotation time will result in one log file being written per day which makes the time in the log file name unnecessary.
+**gmin_log.YYYYmmDD000000** where the time portion of the name is set to zeroes. This is because the log rotation time will result in one log file being written per day which makes the time in the log file name unnecessary.
 
 Information is written to log files in JSON format. An example entry might look like this:
 
