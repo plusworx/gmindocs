@@ -80,6 +80,12 @@ You can use any or all of these flags in one call, for example:
 
 The `gmin show config` command will display any gmin environment variables that are set, as well as contents of a configuration file if one exists.
 
+## set credentials command
+
+The `gmin set credentials` command will display a dialogue that allows you to choose a different credentials file to use with gmin. The command displays a list of files (excluding the current gmin_credentials file) contained in the directory/folder that is set in the configuration credential path.
+
+When you choose a file, a copy of it replaces the current gmin_credentials file. This, in conjunction with the `set config` command, allows you to switch between Google Workspace domains if you need to administer more than one.
+
 ## Environment Variables
 
 If you don't want to use a configuration file and need or want to user environment variables instead, then you can. The following environment variables can be used to provide the same information that a configuration file provides:
