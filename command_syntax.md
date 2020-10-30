@@ -2,7 +2,7 @@
 The gmin command syntax has been designed to be reasonably intuitive and consistent. Commands usually take the form of `gmin <verb> <object> [arguments] [flags]`. Although there may be the odd exception like `gmin whoami`.
 
 ## Flags
-Command flags can have short names like **-x** and long names like **--longnameforx** and they can take an accompanying argument. They can be used with or without an equals sign so that:
+Command flags can have short names like **-x** and long names like **--longnameforx** and they can take an accompanying argument. Short names are prefixed with one hyphen and long names are prefixed with two hyphens. They can be used with or without an equals sign so that:
 
 `--first-name=George` is equivalent to `--first-name George`. However, flags that relate to boolean values (true/false) have a slightly different syntax. An equals sign **must** be used if a value is provided so that:
 
