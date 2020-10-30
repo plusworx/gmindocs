@@ -178,7 +178,7 @@ usr
 
 | Name | Short name | Type | Description |
 |------|------------|------|-------------|
-| --attributes | -a | string | user's attributes as a JSON string |
+| - -attributes | -a | string | user's attributes as a JSON string |
 | --change-password | -c | boolean | user must change password on next login |
 | --first-name | -f | string | user's first name |
 | --force | | string | field list for ForceSendFields separated by '~' |

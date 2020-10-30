@@ -2,7 +2,15 @@
 The gmin command syntax has been designed to be reasonably intuitive and consistent. Commands usually take the form of `gmin <verb> <object> [arguments] [flags]`. Although there may be the odd exception like `gmin whoami`.
 
 ## Flags
-Command flags look like **-x** or **--longnameforx** and they take an accompanying argument. However, flags that relate to boolean values (true/false) just need the flag to be provided with no accompanying argument. For example, the **-c** or **--changepassword** flag when creating or updating a user.
+Command flags can have short names like **-x** and long names like **--longnameforx** and they can take an accompanying argument. They can be used with or without an equals sign so that:
+
+`--first-name=George` is equivalent to `--first-name George`. However, flags that relate to boolean values (true/false) have a slightly different syntax. An equals sign **must** be used if a value is provided so that:
+
+`-c=true` or `-c=false` is correct, but `-c true` is not and will be interpreted incorrectly.
+
+You can set a boolean flag to true by providing the flag on its own like this:
+
+`-c` or `--change-password` but this only works for true and **not** for false.
 
 Some flags are mutually exclusive and others are interdependent. Where this is the case, an error is displayed to explain what is required.
 
