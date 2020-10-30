@@ -183,6 +183,9 @@ JSON data for each user is expected on separate lines like this:
 crt<br />
 usr
 
+**Arguments**<br />
+user's email address
+
 **Flags**
 
 | Name | Short name | Type | Description |
@@ -207,7 +210,10 @@ The create user command allows you to create a Google Workspace user.
 
 **Command aliases**:<br />
 del<br />
-usr  
+usr
+
+**Arguments**<br />
+user's email address or id
 
 **Required Scope**: https://www.googleapis.com/auth/admin.directory.user
 
@@ -217,6 +223,9 @@ The delete user command allows you to delete a Google Workspace user.
 
 **Command aliases**:<br />
 usr
+
+**Arguments**<br />
+user's email address or id
 
 **Required Scope**: https://www.googleapis.com/auth/admin.directory.user.readonly
 
@@ -232,7 +241,10 @@ user, usrs, usr
 
 **Command aliases**:<br />
 und<br />
-usr  
+usr
+
+**Arguments**<br />
+user's id
 
 **Required Scope**: https://www.googleapis.com/auth/admin.directory.user
 
@@ -242,7 +254,10 @@ The undelete user command allows you to undelete a Google Workspace user.
 
 **Command aliases**:<br />
 upd<br />
-usr  
+usr
+
+**Arguments**<br />
+user's email address or id
 
 **Required Scope**: https://www.googleapis.com/auth/admin.directory.user
 
