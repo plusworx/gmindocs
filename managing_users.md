@@ -8,10 +8,13 @@ This section contains information about the commands that you can use to manage 
 bcreate, bcrt<br />
 user, usrs
 
-**Flags**:<br />
---format (-f) input format (valid values: csv, gsheet, json) json is the default<br />
---input-file (-i) Path to input file or Google Sheet ID<br />
---sheet-range (-s) Google sheet data range in the format 'Sheet1!A1:C10'
+**Flags**
+
+| Name | Short name | Type | Description |
+|------|------------|------|-------------|
+| --format | -f | string | input format (valid values: csv, gsheet, json) json is the default |
+| --input-file | -i | string | Path to input file or Google Sheet ID |
+| --sheet-range | -s | Google sheet data range in the format 'Sheet1!A1:C10' |
 
 **Input data**: CSV file, Google Sheet, JSON file or piped JSON input
 
@@ -54,10 +57,13 @@ JSON data for each user is expected on separate lines like this:
 bdelete, bdel<br />
 user, usrs, usr
 
-**Flags**:<br />
---format (-f) input format (valid values: text, gsheet) text is the default<br />
---input-file (-i) Path to input file or Google Sheet ID<br />
---sheet-range (-s) Google sheet data range in the format 'Sheet1!A1:C10'
+**Flags**
+
+| Name | Short name | Type | Description |
+|------|------------|------|-------------|
+| --format | -f | string | input format (valid values: text, gsheet) text is the default |
+| --input-file | -i | string | Path to input file or Google Sheet ID |
+| --sheet-range | -s | Google sheet data range in the format 'Sheet1!A1:C10' |
 
 
 **Input data**: Google Sheet, Text file or piped text input
@@ -85,10 +91,13 @@ The text input file, piped text input or Google Sheet must provide the email add
 bundelete, bund<br />
 user, usrs, usr
 
-**Flags**:<br />
---format (-f) input format (valid values: csv, gsheet, json) json is the default<br />
---input-file (-i) Path to input file or Google Sheet ID<br />
---sheet-range (-s) Google sheet data range in the format 'Sheet1!A1:B10'
+**Flags**
+
+| Name | Short name | Type | Description |
+|------|------------|------|-------------|
+| --format | -f | string | input format (valid values: csv, gsheet, json) json is the default |
+| --input-file | -i | string | Path to input file or Google Sheet ID |
+| --sheet-range | -s | string | Google sheet data range in the format 'Sheet1!A1:B10' |
 
 **Input data**: CSV file, Google Sheet, JSON file or piped JSON input
 
@@ -122,10 +131,13 @@ These names are case insensitive and can be provided in any order.
 bupdate, bupd<br />
 user, usrs, usr
 
-**Flags**:<br />
---format (-f) input format (valid values: csv, gsheet, json) json is the default<br />
---input-file (-i) Path to input file or Google Sheet ID<br />
---sheet-range (-s) Google sheet data range in the format 'Sheet1!A1:H10'
+**Flags**
+
+| Name | Short name | Type | Description |
+|------|------------|------|-------------|
+| --format | -f | string | input format (valid values: csv, gsheet, json) json is the default |
+| --input-file | -i | string | Path to input file or Google Sheet ID |
+| --sheet-range | -s | string | Google sheet data range in the format 'Sheet1!A1:H10' |
 
 **Input data**: CSV file, Google Sheet, JSON file or piped JSON input
 
@@ -154,12 +166,9 @@ These names are case insensitive and can be provided in any order.
 
 JSON data for each user is expected on separate lines like this:
 
-    {"userKey":"stan.laurel@myorg.org","name":{"givenName":"Stanislav","familyName":"Laurelius"},
-    "primaryEmail":"stanislav.laurelius@myorg.org","password":"SuperSuperSecretPassword","changePasswordAtNextLogin":true}
-    {"userKey":"oliver.hardy@myorg.org","name":{"givenName":"Oliviatus","familyName":"Hardium"},
-    "primaryEmail":"oliviatus.hardium@myorg.org","password":"StealthySuperSecretPassword","changePasswordAtNextLogin":true}
-    {"userKey":"harold.lloyd@myorg.org","name":{"givenName":"Haroldus","familyName":"Lloydius"},
-    "primaryEmail":"haroldus.lloydius@myorg.org","password":"MightySuperSecretPassword","changePasswordAtNextLogin":true}
+    {"userKey":"stan.laurel@myorg.org","name":{"givenName":"Stanislav","familyName":"Laurelius"},"primaryEmail":"stanislav.laurelius@myorg.org","password":"SuperSuperSecretPassword","changePasswordAtNextLogin":true}
+    {"userKey":"oliver.hardy@myorg.org","name":{"givenName":"Oliviatus","familyName":"Hardium"},"primaryEmail":"oliviatus.hardium@myorg.org","password":"StealthySuperSecretPassword","changePasswordAtNextLogin":true}
+    {"userKey":"harold.lloyd@myorg.org","name":{"givenName":"Haroldus","familyName":"Lloydius"},"primaryEmail":"haroldus.lloydius@myorg.org","password":"MightySuperSecretPassword","changePasswordAtNextLogin":true}
 
 **Examples**:<br />
 `gmin batch-update users -i inputfile.json`
@@ -178,7 +187,7 @@ usr
 
 | Name | Short name | Type | Description |
 |------|------------|------|-------------|
-| - -attributes | -a | string | user's attributes as a JSON string |
+| --attributes | -a | string | user's attributes as a JSON string |
 | --change-password | -c | boolean | user must change password on next login |
 | --first-name | -f | string | user's first name |
 | --force | | string | field list for ForceSendFields separated by '~' |
