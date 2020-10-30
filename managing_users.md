@@ -174,7 +174,8 @@ JSON data for each user is expected on separate lines like this:
 crt<br />
 usr
 
-**Flags**:<br />
+**Flags**
+
 | Name | Short name | Type | Description |
 |------|------------|------|-------------|
 | --attributes | -a | string | user's attributes as a JSON string |
