@@ -72,7 +72,7 @@ The text input file, piped text input or Google Sheet must provide the email add
     bruce.wayne@mycompany.com
     peter.parker@mycompany.com
 
-**N.B.** Input Google Sheets must not have a header row.
+**N.B.** Input Google Sheets must **not** have a header row.
 
 **Examples**:<br />
 `gmin bdel users -i /path/to/file/inputfile.txt`
@@ -86,21 +86,35 @@ bundelete, bund<br />
 user, usrs, usr
 
 **Flags**:<br />
---input-file (-i) Path to input file
+--format (-f) input format (valid values: csv, gsheet, json) json is the default<br />
+--input-file (-i) Path to input file or Google Sheet ID<br />
+--sheet-range (-s) Google sheet data range in the format 'Sheet1!A1:B10'
 
-**Input data**: Text input file or command line pipe
+**Input data**: CSV file, Google Sheet, JSON file or piped JSON input
 
 **Required Scope**: https://www.googleapis.com/auth/admin.directory.user
 
-The batch-undelete users command allows you to undelete (restore) multiple Google Workspace users with one command. It can take an input file in plain text format or input from a command line pipe. A message is displayed for each user that is undeleted. If an error is encountered, processing stops and the error message is displayed.
+The batch-undelete users command allows you to undelete (restore) multiple Google Workspace users with one command. It takes input data in any of the formats detailed above and outputs a message for each user that it restores. If an error is encountered, it is logged, displayed to the console if the --silent flag is not used and processing continues to the next record.
 
-The input file or piped input must provide the unique id of each user on a separate line like this:
+A JSON input file or piped JSON input must provide data on separate lines like this:
 
-    417578192529765228417
-    308127142904731923463
-    107967172367714327529
+    {"userKey":"417578192529765228417","orgUnitPath":"/Sales"}
+    {"userKey":"308127142904731923463","orgUnitPath":"/"}
+    {"userKey":"107967172367714327529","orgUnitPath":"/Engineering"}
 
 **Please note**: You must provide user ids and NOT email addresses. If you try to use email addresses you will see errors and the command will fail.
+
+CSV files and Google Sheets must contain a header row and the row headings must be valid user attribute names. The only valid attributes are as follows:
+
+* orgUnitPath [required]
+* userKey [required]
+
+These names are case insensitive and can be provided in any order.
+
+**Examples**:<br />
+`gmin batch-undelete users -i inputfile.json`
+`gmin bund user -i inputfile.csv -f csv`
+`gmin bund user -i 1odyAIp3jGspd3M4xeepxWD6aeQIUuHBgrZB2OHSu8MI -s 'Sheet1!A1:B25' -f gsheet`
 
 ## batch-update users
 
@@ -109,21 +123,71 @@ bupdate, bupd<br />
 user, usrs, usr
 
 **Flags**:<br />
---input-file (-i) Path to input file
+--format (-f) input format (valid values: csv, gsheet, json) json is the default<br />
+--input-file (-i) Path to input file or Google Sheet ID<br />
+--sheet-range (-s) Google sheet data range in the format 'Sheet1!A1:H10'
 
-**Input data**: JSON input file
+**Input data**: CSV file, Google Sheet, JSON file or piped JSON input
 
 **Required Scope**: https://www.googleapis.com/auth/admin.directory.user
 
-The batch-update users command allows you to update multiple Google Workspace users with one command. It takes an input file in JSON format. A message is displayed for each user that is updated. If an error is encountered, processing stops and the error message is displayed.
+The batch-update users command allows you to update multiple Google Workspace users with one command. It takes input data in any of the formats detailed above and outputs a message for each user that it updates. If an error is encountered, it is logged, displayed to the console if the --silent flag is not used and processing continues to the next record.
 
-The input file must contain valid JSON. Details for each user are expected on separate lines like this:
+**N.B.** userKey (user email address, alias or id) must be provided.
+
+CSV files and Google Sheets must contain a header row and the row headings must be valid user attribute names. Both CSV files and Google Sheets do not allow input of nested information, therefore the only valid attributes are as follows:
+
+* changePasswordAtNextLogin [value true or false]
+* firstName or givenName
+* includeInGlobalAddressList [value true or false]
+* ipWhitelisted [value true or false]
+* lastName or familyName
+* orgUnitPath
+* password
+* primaryEmail
+* recoveryEmail
+* recoveryPhone [must start with '+' in E.164 format]
+* suspended [value true or false]
+* userKey [required]
+
+These names are case insensitive and can be provided in any order.
+
+JSON data for each user is expected on separate lines like this:
+
+    {"userKey":"stan.laurel@myorg.org","name":{"givenName":"Stanislav","familyName":"Laurelius"},
+    "primaryEmail":"stanislav.laurelius@myorg.org","password":"SuperSuperSecretPassword","changePasswordAtNextLogin":true}
+    {"userKey":"oliver.hardy@myorg.org","name":{"givenName":"Oliviatus","familyName":"Hardium"},
+    "primaryEmail":"oliviatus.hardium@myorg.org","password":"StealthySuperSecretPassword","changePasswordAtNextLogin":true}
+    {"userKey":"harold.lloyd@myorg.org","name":{"givenName":"Haroldus","familyName":"Lloydius"},
+    "primaryEmail":"haroldus.lloydius@myorg.org","password":"MightySuperSecretPassword","changePasswordAtNextLogin":true}
+
+**Examples**:<br />
+`gmin batch-update users -i inputfile.json`
+`gmin bupd users -i inputfile.csv -f csv`
+`gmin bupd user -i 1odyAIp3jGspd3M4xeepxWD6aeQIUuHBgrZB2OHSu8MI -s 'Sheet1!A1:K25' -f gsheet`
+
+**Please note**: If you want to provide JSON user data that has empty values, such as empty strings or false values, then you must use the forceSendFields field (see [Empty Data Fields](empty_data.md)).
 
 ## create user
 
 **Command aliases**:<br />
 crt<br />
-usr  
+usr
+
+**Flags**:<br />
+| Name | Short name | Type | Description |
+|------|------------|------|-------------|
+| --attributes | -a | string | user's attributes as a JSON string |
+| --change-password | -c | boolean | user must change password on next login |
+| --first-name | -f | string | user's first name |
+| --force | | string | field list for ForceSendFields separated by '~' |
+| --global-address-list | -g | boolean | user is included in Global Address List |
+| --last-name | -l | string | user's last name |
+| --orgunit | -o | string | user's orgunit |
+| --password | -p | string | user's password |
+| --recovery-email | -z | string | user's recovery email address |
+| --recovery-phone | -k | string | user's recovery phone |
+| --suspended | -s | boolean | user is suspended |
 
 **Required Scope**: https://www.googleapis.com/auth/admin.directory.user
 

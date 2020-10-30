@@ -11,7 +11,7 @@ There are several batch commands and they all have aliases that save you some ty
 * **batch-undelete** (bundelete, bund)
 * **batch-update** (bupdate, bupd)
 
-Batch commands can accept input data from pipes as well as CSV files and Google Sheets. This means that you can do things like:
+Batch commands can accept input data from pipes as well as text, CSV files and Google Sheets. This means that you can do things like:
 
 `gmin ls user -a primaryemail -q orgunitpath=/TestOU | jq '.users[] | .primaryEmail' -r | gmin bdel user`
 
