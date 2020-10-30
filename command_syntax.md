@@ -17,7 +17,7 @@ Some flags are mutually exclusive and others are interdependent. Where this is t
 Type `gmin <command> -h or --help` to get help about a particular command. For example, to get help about creating a new user you could enter `gmin create user -h`.
 
 ## Flags that take multiple arguments
-Get and list commands can have flags that have multiple arguments and where that is the case, the arguments are separated by the '~' symbol. If you only wanted to display particular fields when getting a list of users then you would specify those fields with an attribute flag and arguments like this:
+Some commands have flags that can take multiple arguments and where that is the case, the arguments are separated by the tilde '~' symbol. If you only wanted to display particular fields when getting a list of users then you would specify those fields with an attribute flag and arguments like this:
 
 `gmin ls users -a field1~field2~field3`
 
