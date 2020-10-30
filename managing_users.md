@@ -14,7 +14,7 @@ user, usrs
 |------|------------|------|-------------|
 | --format | -f | string | input format (valid values: csv, gsheet, json) json is the default |
 | --input-file | -i | string | Path to input file or Google Sheet ID |
-| --sheet-range | -s | Google sheet data range in the format 'Sheet1!A1:C10' |
+| --sheet-range | -s | string | Google sheet data range in the format 'Sheet1!A1:C10' |
 
 **Input data**: CSV file, Google Sheet, JSON file or piped JSON input
 
@@ -63,7 +63,7 @@ user, usrs, usr
 |------|------------|------|-------------|
 | --format | -f | string | input format (valid values: text, gsheet) text is the default |
 | --input-file | -i | string | Path to input file or Google Sheet ID |
-| --sheet-range | -s | Google sheet data range in the format 'Sheet1!A1:C10' |
+| --sheet-range | -s | string | Google sheet data range in the format 'Sheet1!A1:C10' |
 
 
 **Input data**: Google Sheet, Text file or piped text input
