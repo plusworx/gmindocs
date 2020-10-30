@@ -17,6 +17,7 @@
 * [Managing Users](managing_users.md)
 * [Managing User Aliases](managing_user_aliases.md)
 * [Logging](logging.md)
+* [Suppressing Output](suppressing_output.md)
 * [Empty Data Fields](empty_data.md)
 * [Development Roadmap](dev_roadmap.md)
 * [Getting Help](getting_help.md)
