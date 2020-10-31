@@ -4,6 +4,12 @@ This section contains information about the commands that you can use to manage 
 
 ## batch-manage chromeos-devices
 
+The batch-manage chromeos-devices command allows you to perform management actions on multiple Google Workspace managed ChromeOS devices. Valid actions are:
+
+* deprovision
+* enable
+* reenable
+
 **Command aliases**:<br />
 bmanage, bmng<br />
 chromeos-device, cros-devices, cros-device, cros-devs, cros-dev, cdevs, cdev
@@ -17,6 +23,8 @@ chromeos-device, cros-devices, cros-device, cros-devs, cros-dev, cdevs, cdev
 | --sheet-range | -s | string | Google sheet data range in the format 'Sheet1!A1:C25' |
 
 ## batch-move chromeos-devices
+
+The batch-move chromeos-devices command allows you to move multiple Google Workspace managed ChromeOS devices to different orgunits.
 
 **Command aliases**:<br />
 bmove, bmv<br />
@@ -32,6 +40,8 @@ chromeos-device, cros-devices, cros-device, cros-devs, cros-dev, cdevs, cdev
 
 ## batch-update chromeos-devices
 
+The batch-update chromeos-devices command allows you to update information for multiple Google Workspace managed ChromeOS devices.
+
 **Command aliases**:<br />
 bupdate, bupd<br />
 chromeos-device, cros-devices, cros-device, cros-devs, cros-dev, cdevs, cdev
@@ -45,6 +55,8 @@ chromeos-device, cros-devices, cros-device, cros-devs, cros-dev, cdevs, cdev
 | --sheet-range | -s | string | Google sheet data range in the format 'Sheet1!A1:E25' |
 
 ## get chromeos-device
+
+The get chromeos-device command retrieves information about a particular Google Workspace managed ChromeOS device.
 
 **Command aliases**:<br />
 chromeos-device, cros-device, cros-dev, cdev
@@ -60,6 +72,8 @@ device-id
 | --projection | -j | string | type of projection (how much data to display) |
 
 ## list chromeos-devices
+
+The list chromeos-devices command retrieves information about multiple Google Workspace managed ChromeOS devices.
 
 **Command aliases**:<br />
 ls<br />
@@ -81,6 +95,8 @@ chromeos-device, cros-devices, cros-device, cros-devs, cros-dev, cdevs, cdev
 
 ## manage chromeos-device
 
+The manage chromeos-device command allows you to perform management actions on a particular Google Workspace managed ChromeOS device.
+
 **Command aliases**:<br />
 mng<br />
 chromeos-device, cros-device, cros-dev, cdev
@@ -97,6 +113,8 @@ action
 
 ## move chromeos-device
 
+The move chromeos-device command allows you to move a particular Google Workspace managed ChromeOS device to a different orgunit.
+
 **Command aliases**:<br />
 mv<br />
 chromeos-device, cros-device, cros-dev, cdev
@@ -106,6 +124,8 @@ device-id<br />
 orgunitpath
 
 ## update chromeos-device
+
+The update chromeos-device command allows you to update information for a particular Google Workspace managed ChromeOS device.
 
 **Command aliases**:<br />
 upd<br />

@@ -4,6 +4,8 @@ This section contains information about the commands that you can use to manage 
 
 ## batch-create users
 
+The batch-create users command allows you to create multiple Google Workspace users with one command. It takes input data in any of the formats detailed below and outputs a message for each user that it creates. If an error is encountered, it is logged, displayed to the console if the --silent flag is not used and processing continues to the next record.
+
 **Command aliases**:<br />
 bcreate, bcrt<br />
 user, usrs
@@ -19,8 +21,6 @@ user, usrs
 **Input data**: CSV file, Google Sheet, JSON file or piped JSON input
 
 **Required Scope**: https://www.googleapis.com/auth/admin.directory.user
-
-The batch-create users command allows you to create multiple Google Workspace users with one command. It takes input data in any of the formats detailed above and outputs a message for each user that it creates. If an error is encountered, it is logged, displayed to the console if the --silent flag is not used and processing continues to the next record.
 
 CSV files and Google Sheets must contain a header row and the row headings must be valid user attribute names. Both CSV files and Google Sheets do not allow input of nested information, therefore the only valid attributes are as follows:
 
@@ -53,6 +53,8 @@ JSON data for each user is expected on separate lines like this:
 
 ## batch-delete users
 
+The batch-delete users command allows you to delete multiple Google Workspace users with one command. It takes input data in any of the formats detailed below and a message is displayed for each user that is deleted. If an error is encountered, the error is logged and displayed if the --silent flag is not being used. Processing then continues with the next record.
+
 **Command aliases**:<br />
 bdelete, bdel<br />
 user, usrs, usr
@@ -70,8 +72,6 @@ user, usrs, usr
 
 **Required Scope**: https://www.googleapis.com/auth/admin.directory.user
 
-The batch-delete users command allows you to delete multiple Google Workspace users with one command. A message is displayed for each user that is deleted. If an error is encountered, the error is logged and displayed if the --silent flag is not being used. Processing continues with the next record.
-
 The text input file, piped text input or Google Sheet must provide the email address or id of each user on a separate line like this:
 
     frank.castle@mycompany.com
@@ -86,6 +86,8 @@ The text input file, piped text input or Google Sheet must provide the email add
 `gmin ls user -a primaryemail -q orgunitpath=/TestOU | jq '.users[] | .primaryEmail' -r | gmin bdel user`
 
 ## batch-undelete users
+
+The batch-undelete users command allows you to undelete (restore) multiple Google Workspace users with one command. It takes input data in any of the formats detailed below and outputs a message for each user that it restores. If an error is encountered, it is logged, displayed to the console if the --silent flag is not used and processing continues to the next record.
 
 **Command aliases**:<br />
 bundelete, bund<br />
@@ -102,8 +104,6 @@ user, usrs, usr
 **Input data**: CSV file, Google Sheet, JSON file or piped JSON input
 
 **Required Scope**: https://www.googleapis.com/auth/admin.directory.user
-
-The batch-undelete users command allows you to undelete (restore) multiple Google Workspace users with one command. It takes input data in any of the formats detailed above and outputs a message for each user that it restores. If an error is encountered, it is logged, displayed to the console if the --silent flag is not used and processing continues to the next record.
 
 A JSON input file or piped JSON input must provide data on separate lines like this:
 
@@ -127,6 +127,8 @@ These names are case insensitive and can be provided in any order.
 
 ## batch-update users
 
+The batch-update users command allows you to update multiple Google Workspace users with one command. It takes input data in any of the formats detailed below and outputs a message for each user that it updates. If an error is encountered, it is logged, displayed to the console if the --silent flag is not used and processing continues to the next record.
+
 **Command aliases**:<br />
 bupdate, bupd<br />
 user, usrs, usr
@@ -142,8 +144,6 @@ user, usrs, usr
 **Input data**: CSV file, Google Sheet, JSON file or piped JSON input
 
 **Required Scope**: https://www.googleapis.com/auth/admin.directory.user
-
-The batch-update users command allows you to update multiple Google Workspace users with one command. It takes input data in any of the formats detailed above and outputs a message for each user that it updates. If an error is encountered, it is logged, displayed to the console if the --silent flag is not used and processing continues to the next record.
 
 **N.B.** userKey (user email address, alias or id) must be provided.
 
@@ -179,6 +179,8 @@ JSON data for each user is expected on separate lines like this:
 
 ## create user
 
+The create user command allows you to create a Google Workspace user.
+
 **Command aliases**:<br />
 crt<br />
 usr
@@ -204,9 +206,9 @@ user's email address
 
 **Required Scope**: https://www.googleapis.com/auth/admin.directory.user
 
-The create user command allows you to create a Google Workspace user.
-
 ## delete user
+
+The delete user command allows you to delete a Google Workspace user.
 
 **Command aliases**:<br />
 del<br />
@@ -217,9 +219,9 @@ user's email address or id
 
 **Required Scope**: https://www.googleapis.com/auth/admin.directory.user
 
-The delete user command allows you to delete a Google Workspace user.
-
 ## get user
+
+The get user command retrieves information about a particular Google Workspace user.
 
 **Command aliases**:<br />
 usr
@@ -231,6 +233,8 @@ user's email address or id
 
 ## list users
 
+The list users command retrieves information about multiple Google Workspace users.
+
 **Command aliases**:<br />
 ls<br />
 user, usrs, usr
@@ -238,6 +242,8 @@ user, usrs, usr
 **Required Scope**: https://www.googleapis.com/auth/admin.directory.user.readonly
 
 ## undelete user
+
+The undelete user command restores a deleted Google Workspace user. **N.B.** Deleted users are permanently removed after 20 days.
 
 **Command aliases**:<br />
 und<br />
@@ -248,9 +254,9 @@ user's id
 
 **Required Scope**: https://www.googleapis.com/auth/admin.directory.user
 
-The undelete user command allows you to undelete a Google Workspace user.
-
 ## update user
+
+The update user command allows you to update a Google Workspace user.
 
 **Command aliases**:<br />
 upd<br />
@@ -260,5 +266,3 @@ usr
 user's email address or id
 
 **Required Scope**: https://www.googleapis.com/auth/admin.directory.user
-
-The update user command allows you to update a Google Workspace user.
