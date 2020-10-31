@@ -4,7 +4,9 @@ This section contains information about the commands that you can use to manage 
 
 ## batch-manage chromeos-devices
 
-The batch-manage chromeos-devices command allows you to perform management actions on multiple Google Workspace managed ChromeOS devices. Valid actions are:
+The batch-manage chromeos-devices command allows you to perform management actions on multiple Google Workspace managed ChromeOS devices. If an error is encountered, it is logged, displayed to the console if the –silent flag is not used and processing continues to the next record.
+
+Valid actions are:
 
 * deprovision
 * enable
@@ -24,7 +26,7 @@ chromeos-device, cros-devices, cros-device, cros-devs, cros-dev, cdevs, cdev
 
 ## batch-move chromeos-devices
 
-The batch-move chromeos-devices command allows you to move multiple Google Workspace managed ChromeOS devices to different orgunits.
+The batch-move chromeos-devices command allows you to move multiple Google Workspace managed ChromeOS devices to different orgunits. If an error is encountered, it is logged, displayed to the console if the –silent flag is not used and processing continues to the next record.
 
 **Command aliases**:<br />
 bmove, bmv<br />
@@ -40,7 +42,7 @@ chromeos-device, cros-devices, cros-device, cros-devs, cros-dev, cdevs, cdev
 
 ## batch-update chromeos-devices
 
-The batch-update chromeos-devices command allows you to update information for multiple Google Workspace managed ChromeOS devices.
+The batch-update chromeos-devices command allows you to update information for multiple Google Workspace managed ChromeOS devices. If an error is encountered, it is logged, displayed to the console if the –silent flag is not used and processing continues to the next record.
 
 **Command aliases**:<br />
 bupdate, bupd<br />
