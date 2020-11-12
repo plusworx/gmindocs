@@ -145,4 +145,4 @@ device-id
 | --location | -l | string | device location |
 | --notes | -n | string | notes about device |
 | --orgunit-path | -t | string | orgunit device belongs to |
-| --user-key | -u | string | device user |
+| --user | -u | string | device user |
